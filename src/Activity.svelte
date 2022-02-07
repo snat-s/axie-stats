@@ -1,5 +1,6 @@
-// Get the activity of an account
+
 <script>
+// Get the activity of an account
   async function getActivity() {
     const endpoint = "https://graphql-gateway.axieinfinity.com/graphql";
     const data = {
@@ -18,7 +19,8 @@
 	  'content-type': 'application/json'
 	}
       });
-      console.log(response);
+      const activity = await activity.json();
+      console.log(activity);
     } catch(err) {
       console.log(err);
     }

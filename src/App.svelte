@@ -16,7 +16,10 @@
     font-weight: bold;
     color: var(--nord3);
   }
- 
+  #damageCalculator {
+    display: flex;
+    flex-direction: row;
+  }
   @media (min-width: 640px) {
     main {
       max-width: none;
@@ -40,8 +43,17 @@
   <br>
   <br>
   <br>
-  <div id="#DamageCalculator">
+  <h1>Damage Calculator</h1>
+  <div class="row align-items-center">
+    <div class="col">
     <DamageCalculator />
+    </div>
+    <div class="col">
+    <DamageCalculator />
+    </div>
+    <div class="col">
+      <DamageCalculator />
+    </div>
   </div>
   <div>
     <Activity />

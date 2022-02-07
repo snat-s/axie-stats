@@ -4,7 +4,7 @@
   function eraseEnergy() {
     if(energy > 0)
       energy--;
-   
+    
   }
   function endTurn() {
     energy+=2;
@@ -25,33 +25,47 @@
 <main>
   <h2>Round {round}</h2>
   <h3> Energy: {energy} </h3>
-  <div class="column">
-    <span>
-      <button on:click={eraseEnergy}>
-	Used
-      </button>
-    </span>
-    <span>
-      <button on:click={eraseAndGain}>
-	Energy Destroyed
-      </button>
-    </span>
-    <span>
-      <button on:click={gainEnergy}>
-	Gain
-      </button>
-    </span>
-    <span>
-      <button on:click={endTurn}>
-	End Turn
-      </button>
-    </span>
-    <span>
-      <button on:click={reset}>
-	Reset
-      </button>
-    </span>
-  </div>
+  <div class="container">
+      <div class="row align-items-start">
+	<div class="col">
+	  <span>
+	    <button on:click={eraseEnergy}>
+	      Used
+	    </button>
+	  </span>
+	</div>
+
+	<div class="col">
+	  <span>
+	    <button on:click={eraseAndGain}>
+	      Energy Destroyed
+	    </button>
+	  </span>
+	</div>
+      </div>
+	
+	<div class="row align-items-start">
+	  <div class="col">
+	  <span>
+	    <button on:click={gainEnergy}>
+	      Gain
+	    </button>
+	  </span>
+	  </div>
+	  <div class="col">
+	  <span>
+	    <button on:click={endTurn}>
+	      End Turn
+	    </button>
+	  </span>
+	  </div>
+	</div>
+	<span>
+	  <button on:click={reset}>
+	    Reset
+	  </button>
+	</span>
+      </div>
 </main>
 
 <style>
@@ -72,11 +86,6 @@
     --nord13: #ebcb8b;
     --nord14: #a3be8c;
     --nord15: #b48ead;
-  }
-  .column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 3em;
   }
   button {
     height: 75px;

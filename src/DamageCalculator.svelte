@@ -47,10 +47,7 @@
 </script>
 
 <main>
-  <h1>Damage Calculator</h1>
-  <div class="container-fluid">
-    <div class="col">
-      <div class="col-4">
+  <div class="col">
 	<div class="img-thumbnail">
 	<img class="img-thumbnail" src={image} alt="Foto de tu axie">
 	<ul class="list-group">
@@ -66,7 +63,5 @@
 	{/if}
 	<button on:click={printCurrentValue}>Check for axie</button>
       </section>
-      </div>
-    </div>
   </div>
 </main>
