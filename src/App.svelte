@@ -29,30 +29,21 @@
   import Navbar from './Navbar.svelte';
   import EnergyCounter from './Energy_Counter.svelte';
   import DamageCalculator from './DamageCalculator.svelte';
-
-  import {onMount} from "svelte";
-  import axios from "axios";
-  const endpoint = "https://jsonplaceholder.typicode.com/posts";
-  let posts = [];
-  onMount(async function () {
-    const response = await fetch(endpoint);
-    const data = await response.json;
-    console.log("Hola");
-    console.log(data);
-  });
+  import Activity from './Activity.svelte';
 </script>
 
 <main>
   <Navbar />
-  <div>
+  <div id="#EnergyCounter">
   <EnergyCounter />
   </div>
-  {#each posts as article}
-  <div>
-    <p>{article.title}</p>
-  </div>
-  {/each}
-  <div>
+  <br>
+  <br>
+  <br>
+  <div id="#DamageCalculator">
     <DamageCalculator />
+  </div>
+  <div>
+    <Activity />
   </div>
 </main>

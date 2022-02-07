@@ -15,7 +15,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           {#each parts as part}
-          <li class="nav-item"><a class="nav-link" href="/">{part}</a></li>
+          <li class="nav-item"><a class="nav-link" href="#DamageCalculator">{part}</a></li>
         {/each}
         </ul>
       </div>
